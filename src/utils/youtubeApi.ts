@@ -1,4 +1,3 @@
-
 import { toast } from "sonner";
 
 // Interface for a single video
@@ -28,7 +27,8 @@ export interface PlaylistData {
 }
 
 // YouTube API Key - in a real app, this would be stored securely on the server
-const API_KEY = "AIzaSyDjUvpdYuO7hQGgEP1-91Qrk9vR9AOqNlE";
+const API_KEY =import.meta.env.VITE_API_KEY;
+// const API_KEY ="AIzaSyBv04nEakXvDp7YbJL7YHR4R4lf1mXqVPY";
 
 /**
  * Extract the playlist ID from a YouTube URL
