@@ -13,12 +13,14 @@ interface ShareOptionsProps {
 const ShareOptions = ({ playlistId }: ShareOptionsProps) => {
   const [showEmbedCode, setShowEmbedCode] = useState(false);
   
-  const shareUrl = `${window.location.origin}/playlist/${playlistId}`;
+  // Ensure we're using absolute URLs that will work when shared
+  const baseUrl = window.location.origin;
+  const shareUrl = `${baseUrl}/playlist/${playlistId}`;
   
   const embedCode = `<iframe 
   width="100%" 
   height="450" 
-  src="${window.location.origin}/embed/${playlistId}" 
+  src="${baseUrl}/embed/${playlistId}" 
   frameborder="0" 
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
   allowfullscreen></iframe>`;

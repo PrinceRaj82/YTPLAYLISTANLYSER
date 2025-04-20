@@ -60,6 +60,9 @@ const EmbedPage = () => {
     );
   }
 
+  // Get the current origin for creating absolute URLs
+  const origin = window.location.origin;
+
   return (
     <div className="p-4 space-y-4">
       <div className="flex items-center gap-3 mb-4">
@@ -84,7 +87,7 @@ const EmbedPage = () => {
       
       <div className="text-center text-xs text-muted-foreground pt-2">
         <a 
-          href={`https://youtube-playlist-length-finder.lovable.app/playlist/${playlist.id}`}
+          href={`${origin}/playlist/${playlist.id}`}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:underline"
