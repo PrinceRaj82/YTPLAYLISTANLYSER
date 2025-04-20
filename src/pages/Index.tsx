@@ -115,6 +115,9 @@ const Index = () => {
           <p className="text-xs mt-1">
             This site is not affiliated with YouTube or Google.
           </p>
+          <p className="text-xs mt-1">
+            Creator <a href='https://rajkumar-prince.netlify.app'><span>Rajkumar prince</span></a>
+          </p>
         </div>
       </footer>
     </div>
